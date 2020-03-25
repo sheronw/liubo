@@ -1,0 +1,22 @@
+{
+  "name": "liubo",
+  "version": "1.0.0",
+  "description": "liubo findspot visualization",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheronw/liubo.git"
+  },
+  "author": "Sheron W",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sheronw/liubo/issues"
+  },
+  "homepage": "https://github.com/sheronw/liubo#readme",
+  "dependencies": {
+    "mapbox-gl": "^1.9.0"
+  }
+}
