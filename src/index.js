@@ -11,27 +11,20 @@ mapboxgl.accessToken = config.accessToken;
 
 const map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/mapbox/streets-v9",
+  style: "mapbox://styles/sheronw/ck884ry221ba41ipaxyhmlemo",
   center: { lon: 96.97117, lat: 34.95575 },
   zoom: 4,
-  interactive: false
+  maxBounds: [
+    [60, 20], // [west, south]
+    [140, 60] // [east, north]
+  ]
 });
+// add navigation bar
+const nav = new mapboxgl.NavigationControl();
+map.addControl(nav, "bottom-right");
 
 map.on("load", function() {
-  // do something after load
-  showInformation();
-  showMarkers();
-  showSlider();
+  //showInformation(map);
+  showMarkers(map, mapboxgl);
+  //showSlider(map);
 });
-
-function showInformation() {
-  // show necessary information
-}
-
-function showMarkers() {
-  //
-}
-
-function showSlider() {
-  //
-}
