@@ -1,12 +1,14 @@
-// import mapboxgl from "mapbox-gl";
-const mapboxgl = require("mapbox-gl");
-const findSpot = require("data/findspot.geojson");
+import mapboxgl from "mapbox-gl";
+import { showMarkers } from "./map";
+import { config } from "../config";
 
 const mapElement = document.createElement("div");
 mapElement.setAttribute("id", "map");
 document.body.appendChild(mapElement);
 
-mapboxgl.accessToken = "";
+// map initialization
+mapboxgl.accessToken = config.accessToken;
+
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/streets-v9",

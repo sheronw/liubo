@@ -16,37 +16,9 @@ liubo
 
 <del>堆积如山的参考资料</del>
 
-- [中国地图 GeoJson 文件](https://github.com/twobin/china-map-geojson)
-- https://docs.mapbox.com/mapbox-gl-js/example/custom-marker-icons/
-- https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/
 - https://docs.mapbox.com/help/tutorials/show-changes-over-time/
-- https://docs.mapbox.com/mapbox-gl-js/example/language-switch/
 - https://github.com/mapbox/storytelling
 - https://codepen.io/viktorjs/pen/KQZYjo
 - https://codepen.io/iamjoshellis/pen/Kpppqb
 - https://codepen.io/seanstopnik/pen/CeLqA
 - https://codepen.io/simeydotme/pen/mJLPPq
-
-## Mapbox
-
-### GeoJson
-
-构成样例
-
-```
-{
-'type': 'Feature',
-'properties': {
-'message': 'Bar',
-'iconSize': [50, 50]
-},
-'geometry': {
-'type': 'Point',
-'coordinates': [-61.2158203125, -15.97189158092897]
-}
-}
-```
-
-- 要是有条件还得自己搞个 mapbox 的 stylesheet
-
-## Scrollbar
