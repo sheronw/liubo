@@ -4,6 +4,7 @@ const showMarkers = function(map, mapboxgl) {
   findspot.features.forEach(function(marker) {
     // create a DOM element for the marker
     var el = document.createElement("div");
+    el.setAttribute("class", "fade-in fade-out");
     el.className = "marker";
     el.style.backgroundImage =
       "url(https://placekitten.com/g/" +

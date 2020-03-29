@@ -1,5 +1,6 @@
 import mapboxgl from "mapbox-gl";
 import { showMarkers } from "./map";
+import { showSlider } from "./slider";
 import { config } from "../config";
 
 const mapElement = document.createElement("div");
@@ -21,10 +22,22 @@ const map = new mapboxgl.Map({
 });
 // add navigation bar
 const nav = new mapboxgl.NavigationControl();
-map.addControl(nav, "bottom-right");
+map.addControl(nav, "top-right");
 
 map.on("load", function() {
-  //showInformation(map);
+  showInformation(map);
   showMarkers(map, mapboxgl);
-  //showSlider(map);
+  showSlider(map);
 });
+
+function showInformation(map) {
+  // create info
+  const info = document.createElement("div");
+  info.setAttribute("id", "info");
+  // create title
+  const title = document.createElement("h1");
+  title.setAttribute("id", "title");
+  title.innerHTML = "六博出土文物考";
+  info.appendChild(title);
+  document.body.appendChild(info);
+}
