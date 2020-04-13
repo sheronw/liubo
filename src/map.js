@@ -1,17 +1,14 @@
 import { findspot } from "../data/findspot";
 
-const showMarkers = function(map, mapboxgl) {
-  findspot.features.forEach(function(marker) {
+const showMarkers = function (map, mapboxgl) {
+  findspot.features.forEach(function (marker) {
     // create a DOM element for the marker
     var el = document.createElement("div");
-    el.setAttribute("class", "fade-in fade-out");
-    el.className = "marker";
-    el.style.backgroundImage =
-      "url(https://placekitten.com/g/" +
-      marker.properties.iconSize.join("/") +
-      "/)";
-    el.style.width = marker.properties.iconSize[0] + "px";
-    el.style.height = marker.properties.iconSize[1] + "px";
+    el.setAttribute("class", "marker");
+    el.setAttribute("year", marker.properties.year);
+    el.style.backgroundImage = 'url("pic/' + marker.properties.name + '.png")';
+    el.style.width = "50px";
+    el.style.height = "50px";
 
     /*
     el.addEventListener("click", function() {
@@ -26,7 +23,7 @@ const showMarkers = function(map, mapboxgl) {
         new mapboxgl.Popup({
           offset: 50,
           maxWidth: "400px",
-          className: "fade-in"
+          className: "fade-in",
         }) // add popups
           .setHTML(popupContent(marker))
       )
@@ -36,7 +33,20 @@ const showMarkers = function(map, mapboxgl) {
 
 // return html of the marker's popup content
 function popupContent(marker) {
-  return `<h2>${marker.properties.name}</h2><h3>年代 - ${marker.properties.time}</h3><p>${marker.properties.description}</p>`;
+  return (
+    `<h2>${marker.properties.name}</h2>` +
+    `<h3>年代 - ${marker.properties.time}</h3>` +
+    (marker.properties.owner != ""
+      ? `<h3>墓主 - ${marker.properties.owner}</h3>`
+      : "") +
+    (marker.properties.material != ""
+      ? `<h3>材质 - ${marker.properties.material}</h3>`
+      : "") +
+    (marker.properties.dimensions != ""
+      ? `<h3>长宽高 - ${marker.properties.dimensions}</h3>`
+      : "") +
+    `<p>${marker.properties.description}</p>`
+  );
 }
 
 export { showMarkers };

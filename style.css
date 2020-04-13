@@ -103,11 +103,13 @@ input::-moz-focus-outer {
 /* style for marker */
 
 .marker {
-  display: block;
+  /*display: block;*/
+  display: none;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   padding: 0;
+  background-image: 
 }
 
 /* stylesheet for popup */
@@ -129,7 +131,7 @@ input::-moz-focus-outer {
 
 .mapboxgl-popup-content {
   box-shadow: none;
-  background: rgba(215, 196, 187, 0.1);
+  background: rgba(215, 196, 187, 0.4);
   backdrop-filter: blur(1px);
   border: 2px solid var(--main-deco);
   border-radius: 6px;

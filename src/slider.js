@@ -1,6 +1,6 @@
 import { dynasty } from "../data/dynasty";
 
-const showSlider = function(map) {
+const showSlider = function (map) {
   // create slider
   const slider = document.createElement("div");
   slider.setAttribute("id", "slider");
@@ -17,8 +17,22 @@ const showSlider = function(map) {
   // create input element
   const input = document.createElement("input");
   input.setAttribute("id", "control");
+  input.setAttribute("min", dynasty[0].starts);
+  input.setAttribute("max", dynasty[dynasty.length - 1].ends);
   input.setAttribute("type", "range");
-  input.value = 0;
+  input.value = dynasty[0].starts;
+  const updateMarker = function (e) {
+    const curYear = e.target.value;
+    console.log(curYear);
+    const markers = document.querySelectorAll(".marker");
+    markers.forEach((marker) => {
+      if (parseInt(marker.getAttribute("year")) <= curYear) {
+        marker.style.display = "block";
+      } else marker.style.display = "none";
+    });
+  };
+  input.addEventListener("input", updateMarker);
+  input.addEventListener("change", updateMarker);
   slider.appendChild(input);
   // append to document
   document.body.appendChild(slider);
