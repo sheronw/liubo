@@ -25,7 +25,16 @@ liubo
 
 ## Usage
 
+```javascript
+// 根目录新建 config.js
+const config = {
+  accessToken: "YOUR_MAPBOX_ACCESS_TOKEN",
+};
+
+export { config };
 ```
+
+```sh
 # 安装npm依赖
 npm install
 # webpack打包（生产环境）

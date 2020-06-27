@@ -1,17 +1,17 @@
 :root {
   --main-bg: #ad8e7f;
   --main-deco: #904840;
-  --main-highlight: #EB7A77;
+  --main-highlight: #eb7a77;
   --main-content: #554236;
 }
 
 body {
-  font-family: 'Noto Serif SC', serif; 
+  font-family: "Noto Serif SC", serif;
 }
 
 /* stylesheet for info */
 #info {
-  position:fixed;
+  position: fixed;
 }
 
 #title {
@@ -53,24 +53,24 @@ body {
   /*border-radius: 50%;*/
   background: var(--main-deco);
   cursor: pointer;
-  -moz-transition: background .15s ease-in-out;
-  transition: background .15s ease-in-out;
+  -moz-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
 }
 
-#control::-webkit-slider-thumb{
--webkit-appearance: none;
+#control::-webkit-slider-thumb {
+  -webkit-appearance: none;
   appearance: none;
   width: 5px;
   height: 20px;
   /*border-radius: 50%;*/
   background: var(--main-deco);
   cursor: pointer;
-  -webkit-transition: background .15s ease-in-out;
-  transition: background .15s ease-in-out;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
 }
 
 #control::-moz-range-thumb:hover {
-  background: var(--main-highlight); 
+  background: var(--main-highlight);
 }
 
 #control::-webkit-slider-thumb:hover {
@@ -99,7 +99,6 @@ input::-moz-focus-outer {
   color: #ffffff;
 }
 
-
 /* style for marker */
 
 .marker {
@@ -109,7 +108,6 @@ input::-moz-focus-outer {
   border-radius: 50%;
   cursor: pointer;
   padding: 0;
-  background-image: 
 }
 
 /* stylesheet for popup */
@@ -140,19 +138,19 @@ input::-moz-focus-outer {
 .mapboxgl-popup-content h2 {
   color: var(--main-deco);
   text-align: center;
-  font-family: 'Noto Serif SC', serif;
+  font-family: "Noto Serif SC", serif;
 }
 
 .mapboxgl-popup-content h3 {
   color: var(--main-content);
   text-align: center;
-  font-family: 'Noto Serif SC', serif;
+  font-family: "Noto Serif SC", serif;
 }
 
 .mapboxgl-popup-content p {
   color: var(--main-content);
   text-align: center;
-  font-family: 'Noto Serif SC', serif;
+  font-family: "Noto Serif SC", serif;
 }
 
 .mapboxgl-popup-close-button {
@@ -163,7 +161,6 @@ input::-moz-focus-outer {
   display: none;
 }
 
-
 /* fade-in
    fade-out
 */
@@ -172,50 +169,50 @@ input::-moz-focus-outer {
   -webkit-animation: fadeIn ease 1s;
   -moz-animation: fadeIn ease 1s;
   -o-animation: fadeIn ease 1s;
-  -ms-animation: fadeIn ease 1s;12
+  -ms-animation: fadeIn ease 1s;
 }
 @keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-o-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
@@ -229,45 +226,45 @@ input::-moz-focus-outer {
 
 @keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-moz-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-webkit-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-o-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-ms-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }

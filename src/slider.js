@@ -7,7 +7,7 @@ const showSlider = function (map) {
   // create feedback element
   const feedback = document.createElement("h4");
   feedback.setAttribute("id", "feedback");
-  feedback.innerHTML = "南北朝 - BC2023";
+  feedback.innerHTML = "战国 - 公元前453年";
   slider.appendChild(feedback);
   // create timeline element
   const timeline = document.createElement("div");
@@ -23,7 +23,12 @@ const showSlider = function (map) {
   input.value = dynasty[0].starts;
   const updateMarker = function (e) {
     const curYear = e.target.value;
-    console.log(curYear);
+    const curDynasty = dynasty.filter(
+      (d) => d.starts <= curYear && d.ends >= curYear
+    )[0].name;
+    feedback.innerHTML = `${curDynasty} - ${
+      curYear >= 0 ? "公元" : "公元前"
+    }${Math.abs(curYear)}年`;
     const markers = document.querySelectorAll(".marker");
     markers.forEach((marker) => {
       if (parseInt(marker.getAttribute("year")) <= curYear) {
