@@ -104,7 +104,9 @@ input::-moz-focus-outer {
 .marker {
   /*display: block;*/
   display: none;
-  border: none;
+  /*border: 2px solid var(--main-deco);*/
+  background-color: var(--main-deco);
+  opacity: 0.6;
   border-radius: 50%;
   cursor: pointer;
   padding: 0;
@@ -129,7 +131,11 @@ input::-moz-focus-outer {
 
 .mapboxgl-popup-content {
   box-shadow: none;
-  background: rgba(215, 196, 187, 0.4);
+  background: radial-gradient(
+    rgba(256, 256, 256, 0.8),
+    rgba(216, 197, 188, 0.8)
+  );
+  /*background: rgba(216, 197, 188, 0.5);*/
   backdrop-filter: blur(1px);
   border: 2px solid var(--main-deco);
   border-radius: 6px;
@@ -150,6 +156,11 @@ input::-moz-focus-outer {
 .mapboxgl-popup-content p {
   color: var(--main-content);
   text-align: center;
+  font-family: "Noto Serif SC", serif;
+}
+
+.mapboxgl-popup-content td {
+  color: var(--main-content);
   font-family: "Noto Serif SC", serif;
 }
 

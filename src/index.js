@@ -16,15 +16,15 @@ const map = new mapboxgl.Map({
   center: { lon: 96.97117, lat: 34.95575 },
   zoom: 4,
   maxBounds: [
-    [60, 20], // [west, south]
-    [140, 60] // [east, north]
-  ]
+    [60, 15], // [west, south]
+    [140, 60], // [east, north]
+  ],
 });
 // add navigation bar
 const nav = new mapboxgl.NavigationControl();
 map.addControl(nav, "top-right");
 
-map.on("load", function() {
+map.on("load", function () {
   showInformation(map);
   showMarkers(map, mapboxgl);
   showSlider(map);
@@ -37,7 +37,7 @@ function showInformation(map) {
   // create title
   const title = document.createElement("h1");
   title.setAttribute("id", "title");
-  title.innerHTML = "六博出土文物考";
+  title.innerHTML = "六博出土位置考";
   info.appendChild(title);
   document.body.appendChild(info);
 }
