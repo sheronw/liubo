@@ -7,6 +7,7 @@
 
 body {
   font-family: "Noto Serif SC", serif;
+  font-size: medium;
 }
 
 /* stylesheet for info */
@@ -114,10 +115,12 @@ input::-moz-focus-outer {
 
 /* stylesheet for popup */
 
-/*
 .mapboxgl-popup {
+  transform: none !important;
+  top: 20%;
+  padding-bottom: 40px;
+  padding-left: 20px;
 }
-*/
 
 /*
 .mapboxgl-popup-anchor-top {
@@ -139,25 +142,33 @@ input::-moz-focus-outer {
   backdrop-filter: blur(1px);
   border: 2px solid var(--main-deco);
   border-radius: 6px;
+  font-family: "Noto Serif SC", serif;
+  font-size: medium;
 }
 
 .mapboxgl-popup-content h2 {
   color: var(--main-deco);
   text-align: center;
-  font-family: "Noto Serif SC", serif;
 }
 
 .mapboxgl-popup-content h3 {
   color: var(--main-content);
   text-align: center;
-  font-family: "Noto Serif SC", serif;
 }
 
+.mapboxgl-popup-content th,
+td {
+  padding: 5px;
+  min-width: 40px;
+}
+
+/*
 .mapboxgl-popup-content p {
   color: var(--main-content);
   text-align: center;
   font-family: "Noto Serif SC", serif;
 }
+*/
 
 .mapboxgl-popup-content td {
   color: var(--main-content);

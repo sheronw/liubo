@@ -22,7 +22,7 @@ const showMarkers = function (map, mapboxgl) {
       .setPopup(
         new mapboxgl.Popup({
           offset: 50,
-          maxWidth: "400px",
+          maxWidth: "65%",
           className: "fade-in",
         }) // add popups
           .setHTML(popupContent(marker))
@@ -40,9 +40,18 @@ function popupContent(marker) {
     `<tr><td>墓主</td><td>${marker.properties.owner}</td></tr>` +
     `<tr><td>材质</td><td>${marker.properties.material}</td></tr>` +
     `<tr><td>长宽高</td><td>${marker.properties.dimensions}</td></tr>` +
-    "</table>" +
-    `<p>${marker.properties.description}</p>`
+    addDescription(marker.properties) +
+    `<tr><td>参考资料</td><td>${marker.properties.ref}</td></tr>` +
+    "</table>"
   );
+}
+
+function addDescription(p) {
+  let res = "";
+  for (let i = 0; i < p.description.length; i++) {
+    res += `<tr><td>${p.descriptionTag[i]}</td><td>${p.description[i]}</td></tr>`;
+  }
+  return res;
 }
 
 export { showMarkers };
