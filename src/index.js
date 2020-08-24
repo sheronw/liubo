@@ -39,5 +39,10 @@ function showInformation(map) {
   title.setAttribute("id", "title");
   title.innerHTML = "六博出土位置考";
   info.appendChild(title);
+  // create author
+  const author = document.createElement("p");
+  //usage.setAttribute("id", "usage");
+  author.innerHTML = "Copyright © 2020 Sheron W & Jessie Y. Built with Mapbox.";
+  info.appendChild(author);
   document.body.appendChild(info);
 }

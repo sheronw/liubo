@@ -7,7 +7,7 @@ const showSlider = function (map) {
   // create feedback element
   const feedback = document.createElement("h4");
   feedback.setAttribute("id", "feedback");
-  feedback.innerHTML = "战国 - 公元前453年";
+  feedback.innerHTML = "鼠标拖动下方滑块以调整年代";
   slider.appendChild(feedback);
   // create timeline element
   const timeline = document.createElement("div");

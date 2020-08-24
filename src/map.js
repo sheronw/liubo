@@ -22,7 +22,7 @@ const showMarkers = function (map, mapboxgl) {
       .setPopup(
         new mapboxgl.Popup({
           offset: 50,
-          maxWidth: "65%",
+          maxWidth: "80%",
           className: "fade-in",
         }) // add popups
           .setHTML(popupContent(marker))
