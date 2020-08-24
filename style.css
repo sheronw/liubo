@@ -1,3 +1,8 @@
+svg {
+  width: 1em;
+  vertical-align: middle;
+}
+
 :root {
   --main-bg: #ad8e7f;
   --main-deco: #904840;
@@ -13,11 +18,17 @@ body {
 /* stylesheet for info */
 #info {
   position: fixed;
+  padding-left: 20px;
+}
+
+#info p {
+  margin-top: 0.5em;
+  font-size: small;
 }
 
 #title {
   font-size: 250%;
-  margin: 20px;
+  margin-bottom: 0.1em;
 }
 
 /* stylesheet for slider */
@@ -120,6 +131,7 @@ input::-moz-focus-outer {
   top: 20%;
   padding-bottom: 40px;
   padding-left: 20px;
+  max-height: 60%;
 }
 
 /*
