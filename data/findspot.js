@@ -25,6 +25,7 @@ const findspot = {
           "《长沙马王堆二, 三号汉墓》vol.1, 2004, 湖南省博物馆, 湖南省文物考古硏究所编著 ; 主编何介钧；文物出版社<br>" +
           "Xiong Chuan Xin. 1979. Mawangdui sanhao xihanmu chutu de liubo Liubo Unearthed from the Western Han Tomb No.3 of Mawangdui, In: Wenwu Cultural Relics, vol.4: 35-39." +
           '图片出自<a href="http://61.187.53.122/collection.aspx?id=1390&lang=zh-CN" target="_blank">湖南省博物馆</a>',
+        pic: ["image5.jpg", "image18.png"],
       },
       geometry: {
         type: "Point",
@@ -48,6 +49,7 @@ const findspot = {
         ],
         ref:
           "Hebei wenwu yanjiusuo 河北文物研究所. Lingshou city of Zhongshan state during the warring states period: An excavation report 1975-1993. 战国中山国灵寿城: 1975~1993年考古发掘报告. Beijing: Wenwu chubanshe, 2005.",
+        pic: ["image10.jpg", "image16.png", "image23.png"],
       },
       geometry: {
         type: "Point",
@@ -70,6 +72,7 @@ const findspot = {
             "13号墓出土6枚骨质棋子，1枚红漆（3 × 1.4 × 2 cm），5枚黑漆（2.5 × 1.2 × 1.7 cm）",
         ],
         ref: "《云梦睡虎地秦墓》",
+        pic: ["image3.png", "image13.png"],
       },
       geometry: {
         type: "Point",
@@ -89,6 +92,7 @@ const findspot = {
         descriptionTag: [],
         description: [],
         ref: "湖北云梦西汉墓发掘简报 文物 1973.9",
+        pic: ["image6.png"],
       },
       geometry: {
         type: "Point",
@@ -108,6 +112,7 @@ const findspot = {
         description: ["M14:9", "在死者的胸口"],
         ref:
           "《甘肃天水放马滩战国秦汉墓群的发掘》甘肃文物考古研究所，天水市北道区文化馆",
+        pic: ["image8.png", "image20.png"],
       },
       geometry: {
         type: "Point",
@@ -133,6 +138,7 @@ const findspot = {
         ],
         ref:
           "Reference: Yangzhou bowuguan The Yangzhou Museum. 1988. Jiangsu hanjiang yaozhuang 101 hao xihanmu Excavation of the Western Han Tomb No.101 at Yaozhuang, in Hanjiang County, Jiangsu Province, In: Wenwu Cultural Relics, vol.2: 19-43.",
+        pic: ["image19.png"],
       },
       geometry: {
         type: "Point",
@@ -160,6 +166,7 @@ const findspot = {
           "约50根。出自M31/33。银质，有的表面残留一层棕色漆皮，并绘有纹饰。长2.5、宽0.6、厚0.2厘米(图五八) 。",
         ],
         ref: "《金雀山九座汉代墓葬》",
+        pic: ["image22.png"],
       },
       geometry: {
         type: "Point",
@@ -180,6 +187,7 @@ const findspot = {
           "陵园内的二号建筑遗址，位于帝陵东南约300米处的大型礼制建筑",
         ],
         ref: "汉阳陵博物馆，汉阳陵博物馆编，文物出版社，2007年",
+        pic: ["image1.jpg"],
       },
       geometry: {
         type: "Point",
@@ -203,6 +211,7 @@ const findspot = {
         ],
         ref:
           "Anhui sheng wenwu kaogu yanjiusuo Institute of Cultural Relics of Anhui Province (et al.). 1993. Anhui Tianchang xian Sanjiaoxu zhanguo xihanmu chutu wenwu The Cultural Relics Unearthed from the Tombs of the Warring States Period to Western Han Dynasty at Sanjiaoxei in Tianchang County, Anhui, In: Wenwu Cultural Relics, vol.9: 1-31.",
+        pic: ["image15.png"],
       },
       geometry: {
         type: "Point",
@@ -227,6 +236,7 @@ const findspot = {
         ],
         ref:
           "Hubei sheng jingzhou bowuguan The Jingzhou Museum, Hubei. 2003. Jingzhou tianxingguan er hao chumu The Chu State Tomb No.2 at Tianxingguan of Jingzhou. Peking: Wenwu chubanshe Cultural Relics Publishing House.",
+        pic: ["image11.jpg"],
       },
       geometry: {
         type: "Point",
@@ -266,6 +276,7 @@ q1 -6 -11 -10q-15 -6 -22 -22q-3 -8 -9 -44q-14 -89 -23 -135q-7 -26 -10 -48h133l51
           "2件，形制略同。方形。中央方框，四周有曲道，皆刻浅槽。底座与局盘用竹钉连接。通体髹黑漆，曲尺形底座装饰云气纹。",
         ],
         ref: "湖南长沙望城坡西汉渔阳墓发掘简报",
+        pic: ["image21.png", "image14.jpg", "image2.png"],
       },
       geometry: {
         type: "Point",
@@ -292,6 +303,7 @@ q1 -6 -11 -10q-15 -6 -22 -22q-3 -8 -9 -44q-14 -89 -23 -135q-7 -26 -10 -48h133l51
         ],
         ref:
           "Nanjing bowuyuan The Nanjing Museum (et al.). 1992. Yizheng zhangji tuanshan xihanmu Western Han Tombs at Tuanshan, Zhangji, Yizheng, In: Kaogu xuebao Acta Archaeological Sinica, vol.4: 477-507.",
+        pic: ["image9.png"],
       },
       geometry: {
         type: "Point",
@@ -313,6 +325,7 @@ q1 -6 -11 -10q-15 -6 -22 -22q-3 -8 -9 -44q-14 -89 -23 -135q-7 -26 -10 -48h133l51
           "一件，似案。面方形，折边，下有四只高足。盘面有清晰的棋局。",
         ],
         ref: "广西西林县普驮铜鼓墓葬，王克荣;蒋廷瑜;-文物1978年第09期. p36-51.",
+        pic: ["image12.png"],
       },
       geometry: {
         type: "Point",
@@ -334,6 +347,7 @@ q1 -6 -11 -10q-15 -6 -22 -22q-3 -8 -9 -44q-14 -89 -23 -135q-7 -26 -10 -48h133l51
           "青玉质6枚，白玉质6枚，分散在东室各处（3.3 x 2 x 1.3 cm）",
         ],
         ref: "暂无",
+        pic: [],
       },
       geometry: {
         type: "Point",

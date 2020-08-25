@@ -35,6 +35,7 @@ const showMarkers = function (map, mapboxgl) {
 function popupContent(marker) {
   return (
     `<h2>${marker.properties.name}</h2>` +
+    '<div class="container">' +
     "<table>" +
     `<tr><td>年代</td><td>${marker.properties.time}</td></tr>` +
     `<tr><td>墓主</td><td>${marker.properties.owner}</td></tr>` +
@@ -42,7 +43,11 @@ function popupContent(marker) {
     `<tr><td>长宽高</td><td>${marker.properties.dimensions}</td></tr>` +
     addDescription(marker.properties) +
     `<tr><td>参考资料</td><td>${marker.properties.ref}</td></tr>` +
-    "</table>"
+    "</table>" +
+    '<div class="gallery">' +
+    `<img src="pic/${marker.properties.pic[0]}" alt="${marker.properties.name}">` +
+    "</div>" +
+    "</div>"
   );
 }
 
@@ -50,6 +55,14 @@ function addDescription(p) {
   let res = "";
   for (let i = 0; i < p.description.length; i++) {
     res += `<tr><td>${p.descriptionTag[i]}</td><td>${p.description[i]}</td></tr>`;
+  }
+  return res;
+}
+
+function addPic(property) {
+  let res = "";
+  for (let pic of property.pic) {
+    res += `<img src="pic/${pic}" alt="${property.name}">`;
   }
   return res;
 }

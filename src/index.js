@@ -13,11 +13,11 @@ mapboxgl.accessToken = config.accessToken;
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/sheronw/ck884ry221ba41ipaxyhmlemo",
-  center: { lon: 96.97117, lat: 34.95575 },
+  center: { lon: 100, lat: 25 },
   zoom: 4,
   maxBounds: [
-    [60, 15], // [west, south]
-    [140, 60], // [east, north]
+    [75, 20], // [west, south]
+    [130, 45], // [east, north]
   ],
 });
 // add navigation bar

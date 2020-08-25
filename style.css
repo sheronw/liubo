@@ -128,7 +128,7 @@ input::-moz-focus-outer {
 
 .mapboxgl-popup {
   transform: none !important;
-  top: 20%;
+  top: 15vh;
   padding-bottom: 40px;
   padding-left: 20px;
   max-height: 60%;
@@ -172,6 +172,20 @@ input::-moz-focus-outer {
 td {
   padding: 5px;
   min-width: 40px;
+}
+
+.mapboxgl-popup-content .container {
+  display: flex;
+  flex-direction: row;
+}
+
+.mapboxgl-popup-content table {
+  flex: 1;
+}
+
+.gallery img {
+  max-width: 50vw;
+  max-height: 50vh;
 }
 
 /*
