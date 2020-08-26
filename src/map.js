@@ -10,12 +10,6 @@ const showMarkers = function (map, mapboxgl) {
     el.style.width = "25px";
     el.style.height = "25px";
 
-    /*
-    el.addEventListener("click", function() {
-      window.alert(marker.properties.message);
-    });
-    */
-
     // add marker & popup to map
     new mapboxgl.Marker(el)
       .setLngLat(marker.geometry.coordinates)
@@ -36,7 +30,7 @@ function popupContent(marker) {
   const popupContent = document.createElement("div");
   // set up title
   const title = document.createElement("h2");
-  title.innerHTML = `${marker.properties.name}`;
+  title.innerHTML = marker.properties.name;
   popupContent.appendChild(title);
   // set up row wrapper
   const rowWrapper = document.createElement("div");
@@ -56,19 +50,6 @@ function popupContent(marker) {
   const gallery = addGallery(marker.properties);
   rowWrapper.appendChild(gallery);
   return popupContent;
-  /*
-  return (
-    `<h2>${marker.properties.name}</h2>` +
-    '<div class="container">' +
-    "<table>" +
-    
-    "</table>" +
-    '<div class="gallery">' +
-    addPic(marker.properties) +
-    "</div>" +
-    "</div>"
-  );
-  */
 }
 
 function addDescription(p) {
@@ -104,20 +85,27 @@ function addGallery(property) {
     img.setAttribute("alt", `${property.name}`);
     img.setAttribute("class", "pic");
 
-    // left button
-    const buttonL = document.createElement("p");
-    buttonL.innerHTML = "⇦";
-    buttonL.addEventListener("click", galleryHandler("prev", img));
+    if (property.pic.length > 1) {
+      // show left and right button
 
-    // right button
-    const buttonR = document.createElement("p");
-    buttonR.innerHTML = "⇨";
-    buttonR.addEventListener("click", galleryHandler("next", img));
+      // left button
+      const buttonL = document.createElement("p");
+      buttonL.innerHTML = '<i class="fa fa-angle-left"></i>';
+      buttonL.addEventListener("click", galleryHandler("prev", img));
 
-    // assemble & return
-    gallery.appendChild(buttonL);
-    gallery.appendChild(img);
-    gallery.appendChild(buttonR);
+      // right button
+      const buttonR = document.createElement("p");
+      buttonR.innerHTML = '<i class="fa fa-angle-right"></i>';
+      buttonR.addEventListener("click", galleryHandler("next", img));
+
+      // assemble & return
+      gallery.appendChild(buttonL);
+      gallery.appendChild(img);
+      gallery.appendChild(buttonR);
+    } else {
+      // only add image
+      gallery.appendChild(img);
+    }
   }
   return gallery;
 }
