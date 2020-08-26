@@ -25,7 +25,7 @@ const showMarkers = function (map, mapboxgl) {
           maxWidth: "80%",
           className: "fade-in",
         }) // add popups
-          .setHTML(popupContent(marker))
+          .setDOMContent(popupContent(marker))
       )
       .addTo(map);
   });
@@ -33,22 +33,42 @@ const showMarkers = function (map, mapboxgl) {
 
 // return html of the marker's popup content
 function popupContent(marker) {
-  return (
-    `<h2>${marker.properties.name}</h2>` +
-    '<div class="container">' +
-    "<table>" +
+  const popupContent = document.createElement("div");
+  // set up title
+  const title = document.createElement("h2");
+  title.innerHTML = `${marker.properties.name}`;
+  popupContent.appendChild(title);
+  // set up row wrapper
+  const rowWrapper = document.createElement("div");
+  rowWrapper.setAttribute("class", "rowWrapper");
+  popupContent.appendChild(rowWrapper);
+  // set up table
+  const table = document.createElement("table");
+  table.innerHTML =
     `<tr><td>年代</td><td>${marker.properties.time}</td></tr>` +
     `<tr><td>墓主</td><td>${marker.properties.owner}</td></tr>` +
     `<tr><td>材质</td><td>${marker.properties.material}</td></tr>` +
     `<tr><td>长宽高</td><td>${marker.properties.dimensions}</td></tr>` +
     addDescription(marker.properties) +
-    `<tr><td>参考资料</td><td>${marker.properties.ref}</td></tr>` +
+    `<tr><td>参考资料</td><td>${marker.properties.ref}</td></tr>`;
+  rowWrapper.appendChild(table);
+  // set up gallery
+  const gallery = addGallery(marker.properties);
+  rowWrapper.appendChild(gallery);
+  return popupContent;
+  /*
+  return (
+    `<h2>${marker.properties.name}</h2>` +
+    '<div class="container">' +
+    "<table>" +
+    
     "</table>" +
     '<div class="gallery">' +
-    `<img src="pic/${marker.properties.pic[0]}" alt="${marker.properties.name}">` +
+    addPic(marker.properties) +
     "</div>" +
     "</div>"
   );
+  */
 }
 
 function addDescription(p) {
@@ -59,12 +79,47 @@ function addDescription(p) {
   return res;
 }
 
-function addPic(property) {
-  let res = "";
-  for (let pic of property.pic) {
-    res += `<img src="pic/${pic}" alt="${property.name}">`;
+function addGallery(property) {
+  const gallery = document.createElement("div");
+  gallery.setAttribute("class", "gallery");
+  // set up img in gallery
+  if (property.pic.length) {
+    // function for event handle
+    function galleryHandler(direction, img) {
+      return () => {
+        const cur = img.getAttribute("src").slice(4);
+        const index =
+          direction == "prev"
+            ? (property.pic.length + property.pic.indexOf(cur) - 1) %
+              property.pic.length
+            : (property.pic.indexOf(cur) + 1) % property.pic.length;
+        const newPic = property.pic[index];
+        img.setAttribute("src", `pic/${newPic}`);
+      };
+    }
+
+    // img
+    const img = document.createElement("img");
+    img.setAttribute("src", `pic/${property.pic[0]}`);
+    img.setAttribute("alt", `${property.name}`);
+    img.setAttribute("class", "pic");
+
+    // left button
+    const buttonL = document.createElement("p");
+    buttonL.innerHTML = "⇦";
+    buttonL.addEventListener("click", galleryHandler("prev", img));
+
+    // right button
+    const buttonR = document.createElement("p");
+    buttonR.innerHTML = "⇨";
+    buttonR.addEventListener("click", galleryHandler("next", img));
+
+    // assemble & return
+    gallery.appendChild(buttonL);
+    gallery.appendChild(img);
+    gallery.appendChild(buttonR);
   }
-  return res;
+  return gallery;
 }
 
 export { showMarkers };
