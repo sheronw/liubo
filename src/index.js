@@ -2,6 +2,8 @@ import mapboxgl from "mapbox-gl";
 import { showMarkers } from "./map";
 import { showSlider } from "./slider";
 import { config } from "../config";
+// webpack
+import style from "../style.css";
 
 const mapElement = document.createElement("div");
 mapElement.setAttribute("id", "map");
