@@ -15,10 +15,10 @@ mapboxgl.accessToken = config.accessToken;
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/sheronw/ck884ry221ba41ipaxyhmlemo",
-  center: { lon: 100, lat: 25 },
+  center: { lon: 100, lat: 30 },
   zoom: 4,
   maxBounds: [
-    [75, 20], // [west, south]
+    [75, 15], // [west, south]
     [130, 45], // [east, north]
   ],
 });
@@ -44,7 +44,8 @@ function showInformation(map) {
   // create author
   const author = document.createElement("p");
   //usage.setAttribute("id", "usage");
-  author.innerHTML = "Copyright © 2020 Sheron W & Jessie Y. Built with Mapbox.";
+  author.innerHTML =
+    'Copyright © 2020 <a href="https://sheronw.xyz">Sheron W</a> & <a href="mailto: jyuan3@oberlin.edu">Jingyi Y</a>. Built with Mapbox.';
   info.appendChild(author);
   document.body.appendChild(info);
 }
