@@ -12,7 +12,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm install
-          echo "const config = {accessToken:'${{MAPBOX_TOKEN}}'};export { config };" > config.js
+          echo "const config = {accessToken:'${{ secrets.MAPBOX_TOKEN }}'};export { config };" > config.js
           npm run build
 
       - name: Deploy 🚀
