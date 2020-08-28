@@ -24,7 +24,14 @@ a {
 }
 
 /* stylesheet for info */
+@media (max-height: 15vh) {
+  #info {
+    display: none;
+  }
+}
+
 #info {
+  top: 1rem;
   position: fixed;
   padding-left: 20px;
 }
@@ -39,9 +46,9 @@ a {
 }
 
 #title {
-  font-size: 250%;
+  font-size: 2rem;
   margin-bottom: 0;
-  margin-top: 1rem;
+  margin-top: 0;
   padding: 0.5rem;
   background-color: var(--main-content);
   color: var(--main-bg);
@@ -145,10 +152,10 @@ input::-moz-focus-outer {
 
 .mapboxgl-popup {
   transform: none !important;
-  top: 15vh;
+  top: 7rem;
   padding-bottom: 40px;
   padding-left: 20px;
-  max-height: 60%;
+  max-height: 80vh;
   z-index: 10;
 }
 
@@ -157,12 +164,25 @@ input::-moz-focus-outer {
   background: var(--main-content);
   font-family: "Noto Serif SC", serif;
   font-size: medium;
-  border-radius: 1em;
+  overflow: auto;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
-.mapboxgl-popup-anchor-top-right .mapboxgl-popup-content {
-  /* to override mapbox popup behavior */
-  border-top-right-radius: 1em;
+/* scrollbar styles in popup */
+.mapboxgl-popup-content {
+  scrollbar-color: var(--main-highlight) var(--main-content);
+}
+
+.mapboxgl-popup-content::-webkit-scrollbar {
+  width: 1em;
+}
+.mapboxgl-popup-content::-webkit-scrollbar-track {
+  background: var(--main-content);
+}
+.mapboxgl-popup-content::-webkit-scrollbar-thumb {
+  background-color: var(--main-highlight);
+  border-radius: 1em;
+  border: 3px solid var(--main-content);
 }
 
 .mapboxgl-popup-content h2 {
