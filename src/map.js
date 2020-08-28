@@ -9,14 +9,13 @@ const showMarkers = function (map, mapboxgl) {
     //el.style.backgroundImage = 'url("pic/' + marker.properties.name + '.png")';
     el.style.width = "25px";
     el.style.height = "25px";
-
     // add marker & popup to map
     new mapboxgl.Marker(el)
       .setLngLat(marker.geometry.coordinates)
       .setPopup(
         new mapboxgl.Popup({
           offset: 50,
-          maxWidth: "80%",
+          maxWidth: "80vw",
           className: "fade-in",
           closeButton: false,
         }) // add popups
@@ -36,6 +35,7 @@ function popupContent(marker) {
   // set up row wrapper
   const rowWrapper = document.createElement("div");
   rowWrapper.setAttribute("class", "rowWrapper");
+
   popupContent.appendChild(rowWrapper);
   // set up table
   const table = document.createElement("table");
