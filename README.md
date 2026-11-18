@@ -27,6 +27,6 @@ npm run build
 
 ## Feedback
 
-Please create issue or PR if you found any problems about this website. Contact `jyuan3@oberlin.edu` to provide information or make revision related to liubo.
+Please create issue or PR if you found any problems about this website. Contact `jy3190@columbia.edu` to provide information or make revision related to liubo.
 
-欢迎 issue & PR ，六博内容相关信息的提供或订正请发邮件至`jyuan3@oberlin.edu`。
+欢迎 issue & PR ，六博内容相关信息的提供或订正请发邮件至`jy3190@columbia.edu`。
