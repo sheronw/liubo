@@ -1,4 +1,5 @@
 import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 import { showMarkers } from "./map";
 import { showSlider } from "./slider";
 import { config } from "../config";
@@ -45,7 +46,7 @@ function showInformation(map) {
   const author = document.createElement("p");
   //usage.setAttribute("id", "usage");
   author.innerHTML =
-    'Copyright © 2020 <a href="https://sheronw.xyz">Sheron W</a> & <a href="mailto: jyuan3@oberlin.edu">Jingyi Y</a>. Built with Mapbox.';
+    'Copyright © 2020 <a href="https://sheronw.xyz">Sheron W</a> & <a href="mailto: jy3190@columbia.edu">Jingyi Y</a>. Built with Mapbox.';
   info.appendChild(author);
   document.body.appendChild(info);
 }
